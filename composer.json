@@ -1,0 +1,20 @@
+{
+    "name": "deadlymous/chengxinyun",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Chengxinyun\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "JC",
+            "email": "2632324841@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.5",
+        "guzzlehttp/guzzle": "^7.7"
+    }
+}
