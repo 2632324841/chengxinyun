@@ -1,7 +1,7 @@
 <?php
 
-namespace Chengxinyun\api;
-use Chengxinyun\Core;
+namespace chengxinyun\api;
+use chengxinyun\Core;
 class Invoice extends Core
 {
 
@@ -12,7 +12,7 @@ class Invoice extends Core
     public function get_invoice_type(array $data = [])
     {
         $data['timestamp'] = $this->getCurrentMilliseconds();
-        $sign_data['agentNumber'] = $data['agentNumber'];
+        $sign_data['partnerCode'] = $data['partnerCode'];
         $sign_data['timestamp'] = $data['timestamp'];
         $sign = $this->generateSignature($sign_data);
         $data['sign'] = $sign;
@@ -27,7 +27,7 @@ class Invoice extends Core
     public function add_invoice(array $data = [])
     {
         $data['timestamp'] = $this->getCurrentMilliseconds();
-        $sign_data['agentNumber'] = $data['agentNumber'];
+        $sign_data['partnerCode'] = $data['partnerCode'];
         $sign_data['timestamp'] = $data['timestamp'];
         $sign_data['invoiceType'] = $data['invoiceType'];
         $sign_data['categoryOfInvoice'] = $data['categoryOfInvoice'];
@@ -50,7 +50,7 @@ class Invoice extends Core
     public function get_invoice_result(array $data = [])
     {
         $data['timestamp'] = $this->getCurrentMilliseconds();
-        $sign_data['agentNumber'] = $data['agentNumber'];
+        $sign_data['partnerCode'] = $data['partnerCode'];
         $sign_data['timestamp'] = $data['timestamp'];
         $sign_data['invoiceOrderNumber'] = $data['invoiceOrderNumber'];
         $sign = $this->generateSignature($sign_data);

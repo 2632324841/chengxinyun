@@ -1,7 +1,7 @@
 <?php
 
-namespace Chengxinyun\api;
-use Chengxinyun\Core;
+namespace chengxinyun\api;
+use chengxinyun\Core;
 class Recharge extends Core
 {
 
@@ -12,7 +12,7 @@ class Recharge extends Core
     public function get_account(array $data = [])
     {
         $data['timestamp'] = $this->getCurrentMilliseconds();
-        $sign_data['agentNumber'] = $data['agentNumber'];
+        $sign_data['partnerCode'] = $data['partnerCode'];
         $sign_data['timestamp'] = $data['timestamp'];
         $sign = $this->generateSignature($sign_data);
         $data['sign'] = $sign;
@@ -27,7 +27,7 @@ class Recharge extends Core
     public function get_recharge(array $data = [])
     {
         $data['timestamp'] = $this->getCurrentMilliseconds();
-        $sign_data['agentNumber'] = $data['agentNumber'];
+        $sign_data['partnerCode'] = $data['partnerCode'];
         $sign_data['timestamp'] = $data['timestamp'];
         $sign_data['accountId'] = $data['accountId'];
         $sign = $this->generateSignature($sign_data);
@@ -43,7 +43,7 @@ class Recharge extends Core
     public function add_recharge_order(array $data = [])
     {
         $data['timestamp'] = $this->getCurrentMilliseconds();
-        $sign_data['agentNumber'] = $data['agentNumber'];
+        $sign_data['partnerCode'] = $data['partnerCode'];
         $sign_data['timestamp'] = $data['timestamp'];
         $sign_data['merchantsAccountId'] = $data['merchantsAccountId'];
         $sign_data['merchantsName'] = $data['merchantsName'];
@@ -65,7 +65,7 @@ class Recharge extends Core
     public function get_recharge_result(array $data = [])
     {
         $data['timestamp'] = $this->getCurrentMilliseconds();
-        $sign_data['agentNumber'] = $data['agentNumber'];
+        $sign_data['partnerCode'] = $data['partnerCode'];
         $sign_data['timestamp'] = $data['timestamp'];
         $sign_data['rechargeNumber'] = $data['rechargeNumber'];
         $sign = $this->generateSignature($sign_data);
@@ -81,7 +81,7 @@ class Recharge extends Core
     public function list_recharge_result(array $data = [])
     {
         $data['timestamp'] = $this->getCurrentMilliseconds();
-        $sign_data['agentNumber'] = $data['agentNumber'];
+        $sign_data['partnerCode'] = $data['partnerCode'];
         $sign_data['timestamp'] = $data['timestamp'];
         $sign = $this->generateSignature($sign_data);
         $data['sign'] = $sign;

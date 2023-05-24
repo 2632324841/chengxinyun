@@ -1,7 +1,7 @@
 <?php
 
-namespace Chengxinyun\api;
-use Chengxinyun\Core;
+namespace chengxinyun\api;
+use chengxinyun\Core;
 class Salary extends Core
 {
 
@@ -12,7 +12,7 @@ class Salary extends Core
     public function add(array $data = [])
     {
         $data['timestamp'] = $this->getCurrentMilliseconds();
-        $sign_data['agentNumber'] = $data['agentNumber'];
+        $sign_data['partnerCode'] = $data['partnerCode'];
         $sign_data['timestamp'] = $data['timestamp'];
         $sign_data['batchId'] = $data['batchId'];
         $sign = $this->generateSignature($sign_data);
@@ -28,7 +28,7 @@ class Salary extends Core
     public function detail(array $data = [])
     {
         $data['timestamp'] = $this->getCurrentMilliseconds();
-        $sign_data['agentNumber'] = $data['agentNumber'];
+        $sign_data['partnerCode'] = $data['partnerCode'];
         $sign_data['timestamp'] = $data['timestamp'];
         $sign = $this->generateSignature($sign_data);
         $data['sign'] = $sign;
@@ -43,7 +43,7 @@ class Salary extends Core
     public function order_dtl(array $data = [])
     {
         $data['timestamp'] = $this->getCurrentMilliseconds();
-        $sign_data['agentNumber'] = $data['agentNumber'];
+        $sign_data['partnerCode'] = $data['partnerCode'];
         $sign_data['timestamp'] = $data['timestamp'];
         $sign = $this->generateSignature($sign_data);
         $data['sign'] = $sign;
@@ -58,7 +58,7 @@ class Salary extends Core
     public function balance(array $data = [])
     {
         $data['timestamp'] = $this->getCurrentMilliseconds();
-        $sign_data['agentNumber'] = $data['agentNumber'];
+        $sign_data['partnerCode'] = $data['partnerCode'];
         $sign_data['timestamp'] = $data['timestamp'];
         $sign = $this->generateSignature($sign_data);
         $data['sign'] = $sign;
@@ -73,7 +73,7 @@ class Salary extends Core
     public function refund_list(array $data = [])
     {
         $data['timestamp'] = $this->getCurrentMilliseconds();
-        $sign_data['agentNumber'] = $data['agentNumber'];
+        $sign_data['partnerCode'] = $data['partnerCode'];
         $sign_data['timestamp'] = $data['timestamp'];
         $sign = $this->generateSignature($sign_data);
         $data['sign'] = $sign;

@@ -1,14 +1,13 @@
 <?php
 
-namespace Chengxinyun\api;
+namespace chengxinyun\api;
 
-use Chengxinyun\Core;
+use chengxinyun\Core;
 
 class Merchant extends Core
 {
 
     /**
-     * 获取服务商列表
      * 接口说明：获取商户签约所需税源地列表
      */
     public function merchants_list_tax(array $data = [])
@@ -23,7 +22,6 @@ class Merchant extends Core
     }
 
     /**
-     * 商户签约
      * 接口说明：获取商户签约所需税源地列表
      */
     public function merchants_sign(array $data = [])
@@ -44,7 +42,6 @@ class Merchant extends Core
     }
 
     /**
-     * 商户信息列表
      * 接口说明：创建商户
      */
     public function merchants_list_info(array $data = [])
