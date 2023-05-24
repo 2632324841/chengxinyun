@@ -29,6 +29,7 @@ class Salary extends Core
         $data['timestamp'] = $this->getCurrentMilliseconds();
         $sign_data['partnerCode'] = $data['partnerCode'];
         $sign_data['timestamp'] = $data['timestamp'];
+        $sign_data['batchId'] = $data['batchId'];
         $sign = $this->generateSignature($sign_data);
         $data['sign'] = $sign;
         $res = $this->request('POST', '/cxy/salary/detail', $data);
@@ -44,7 +45,6 @@ class Salary extends Core
         $data['timestamp'] = $this->getCurrentMilliseconds();
         $sign_data['partnerCode'] = $data['partnerCode'];
         $sign_data['timestamp'] = $data['timestamp'];
-        $sign_data['batchId'] = $data['batchId'];
         $sign = $this->generateSignature($sign_data);
         $data['sign'] = $sign;
         $res = $this->request('POST', '/cxy/salary/orderDtl', $data);
