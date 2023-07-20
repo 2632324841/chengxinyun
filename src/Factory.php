@@ -9,14 +9,7 @@ class Factory
 {
     private static $objects = [];
 
-    /**
-     * Undocumented function
-     *
-     * @param [type] $name
-     * @param [type] $arguments
-     * @see \Chengxinyun\api\*
-     * @return object|null
-     */
+    
     public static function __callStatic($name, $arguments)
     {
         $class = __NAMESPACE__ . '\\api\\' . $name;
