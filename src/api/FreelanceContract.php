@@ -1,7 +1,7 @@
 <?php
 
-namespace chengxinyun\api;
-use chengxinyun\Core;
+namespace Chengxinyun\api;
+use Chengxinyun\Core;
 class FreelanceContract extends Core
 {
 

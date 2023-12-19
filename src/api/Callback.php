@@ -1,6 +1,6 @@
 <?php
-namespace chengxinyun\api;
-use chengxinyun\Core;
+namespace Chengxinyun\api;
+use Chengxinyun\Core;
 class Callback extends Core{
     
     /**

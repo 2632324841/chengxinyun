@@ -1,8 +1,8 @@
 <?php
 
-namespace chengxinyun\api;
+namespace Chengxinyun\api;
 
-use chengxinyun\Core;
+use Chengxinyun\Core;
 
 class Merchant extends Core
 {
