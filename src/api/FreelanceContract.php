@@ -1,13 +1,22 @@
 <?php
 
 namespace Chengxinyun\api;
+
 use Chengxinyun\Core;
+
+/**
+ * Class FreelanceContract
+ * @package Chengxinyun\api
+ */
 class FreelanceContract extends Core
 {
-
     /**
      * 自由职业者签约
      * 接口说明：创建自由职业者
+     *
+     * @param array $data
+     * @return array
+     * @throws \Exception
      */
     public function sign_contract(array $data = [])
     {
@@ -23,6 +32,10 @@ class FreelanceContract extends Core
     /**
      * 自由职业者列表
      * 接口说明：查询商户下自由职业者信息
+     *
+     * @param array $data
+     * @return array
+     * @throws \Exception
      */
     public function list_info(array $data = [])
     {

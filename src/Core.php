@@ -62,7 +62,7 @@ class Core
         throw new \Exception($data);
     }
 
-    protected function post_data($property)
+    protected function postData($property)
     {
         // 获取JSON请求数据
         $jsonData = file_get_contents('php://input');
